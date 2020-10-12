@@ -59,7 +59,7 @@ class App extends React.Component {
           <div className="titleImage">
             <div className="layer">
               <div className="titleLogo">
-                <img src="../logo.jpg" alt="Girl in a jacket" width="80" height="80"/>
+                <img src="logo.jpg" alt="logo" width="80" height="80"/>
                 <span className="titleText">ACME POLE BARNS</span>
                 <span className="titleTextLower1">Custom builds and</span>
                 <span className="titleTextLower2">pre-designed models</span>
