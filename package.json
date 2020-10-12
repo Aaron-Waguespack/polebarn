@@ -1,18 +1,22 @@
 {
   "name": "example",
   "version": "1.0.0",
-  "description": "",
+  "description": "polebarn",
+  "homepage": "http://Aaron-Waguespack.github.io/polebarn",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
     "react-dev": "webpack -d --watch",
-    "start": "live-server ./dist"
+    "start": "live-server ./dist",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^3.4.0",
+    "gh-pages": "^3.1.0",
     "style-loader": "^1.1.2",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"

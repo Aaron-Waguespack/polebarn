@@ -21,7 +21,7 @@ render() {
                                     alt="First slide"
                                 />
                                 <Carousel.Caption>
-                                    <h3>Design 1</h3>
+                                    <div>Design 1</div>
                                 </Carousel.Caption>
                             </Carousel.Item>
 
@@ -32,18 +32,18 @@ render() {
                                     alt="Second slide"
                                 />
                                 <Carousel.Caption>
-                                    <h3>Design 2</h3>
+                                    <div>Design 2</div>
                                 </Carousel.Caption>
                             </Carousel.Item>
 
                             <Carousel.Item>
                                 <img
                                     className="carouselImage d-block w-100"
-                                    src="/render1.jpg"
+                                    src="/render3.jpg"
                                     alt="Third slide"
                                 />
                                 <Carousel.Caption>
-                                    <h3>Design 3</h3>
+                                    <div>Design 3</div>
                                 </Carousel.Caption>
                             </Carousel.Item>
                         </Carousel>
