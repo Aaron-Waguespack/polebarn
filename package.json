@@ -9,7 +9,8 @@
     "react-dev": "webpack -d --watch",
     "start": "live-server ./dist",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress"
   },
   "keywords": [],
   "author": "",
