@@ -10,7 +10,7 @@
     "start": "live-server ./dist",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress"
+    "heroku-postbuild": "webpack -d"
   },
   "keywords": [],
   "author": "",
