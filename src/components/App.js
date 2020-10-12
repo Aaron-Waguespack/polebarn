@@ -93,29 +93,40 @@ class App extends React.Component {
         </div>
         <div className="contact">
           <div className= "contactForm">
-          <div className = "contactTitle">CONTACT US</div>
-          <div>First Name*</div>
-          <div className="formField"></div>
-          <div>Last Name*</div>
-          <div className="formField"></div>
-          <div>Email*</div>
-          <div className="formField"></div>
-          <div className = "formShortRow">
-            <div className = "shortOne">
-            <div>Comapny Name</div>
-            <div className="formFieldShort"></div>
+          <form action="https://api.staticforms.xyz/submit" method="post">
+            <input type="text" name="name" placeholder="Your Name"/>
+            <input type="text" name="email" placeholder="Your Email" />
+            <textarea name="message"></textarea>
+            <input type="text" name="honeypot" style="display:none"/>
+            <input type="hidden" name="accessKey" value="ae871976-8296-4204-ab4c-c6646e3fbda3"/>
+            <input type="hidden" name="subject" value="Contact us from - example.com" />
+            <input type="hidden" name="replyTo" value="@"/>
+            <input type="hidden" name="redirectTo" value="https://example.com/contact/success"/>
+            <input type="submit" value="Submit" />
+        </form>
+            {/* <div className = "contactTitle">CONTACT US</div>
+            <div>First Name*</div>
+            <div className="formField"></div>
+            <div>Last Name*</div>
+            <div className="formField"></div>
+            <div>Email*</div>
+            <div className="formField"></div>
+            <div className = "formShortRow">
+              <div className = "shortOne">
+              <div>Comapny Name</div>
+              <div className="formFieldShort"></div>
+              </div>
+              <div className="shortTwo">
+              <div>Phone*</div>
+              <div className="formFieldShort"></div>
+              </div>
             </div>
-            <div className="shortTwo">
-            <div>Phone*</div>
-            <div className="formFieldShort"></div>
+            <div>Project Type Product*</div>
+            <div className="formFieldProduct"></div>
+            <div className ="formWarn">Please select option from the dropdown menu...</div>
+            <div>Message*</div>
+            <div className="formMessage"></div> */}
             </div>
-          </div>
-          <div>Project Type Product*</div>
-          <div className="formFieldProduct"></div>
-          <div className ="formWarn">Please select option from the dropdown menu...</div>
-          <div>Message*</div>
-          <div className="formMessage"></div>
-          </div>
           <div className="contactInfo">
           <div className= "contactTitle">CONTACT US FOR ANY OF YOUR POLE BARN NEEDS</div>
           <div className= "contactPhone">303.999.1234</div>
