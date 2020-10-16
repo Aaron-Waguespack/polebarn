@@ -7,68 +7,133 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      contactHovering: false,
+      aboutHovering: false,
+      expertiseHovering: false,
+      idz:"",
       projects:[
-        {
-          name:"Project 1",
-          header_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSR_SXjCMKCZhzFijR82Qe99ykQ1qayJI9fZdULfnRUvwA3O7rlaFQi2QeE5ek&usqp=CAc"
-        },
-        {
-          name:"Project 2",
-          header_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSR_SXjCMKCZhzFijR82Qe99ykQ1qayJI9fZdULfnRUvwA3O7rlaFQi2QeE5ek&usqp=CAc"
-        },
-        {
-          name:"Project 3",
-          header_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcShnXqCb1hVmRUAiGnYqywRpEbJhcX027b0ng&usqp=CAU"
+        // {
+        //   name:"Project 1",
+        //   header_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSR_SXjCMKCZhzFijR82Qe99ykQ1qayJI9fZdULfnRUvwA3O7rlaFQi2QeE5ek&usqp=CAc"
+        // },
+        // {
+        //   name:"Project 2",
+        //   header_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSR_SXjCMKCZhzFijR82Qe99ykQ1qayJI9fZdULfnRUvwA3O7rlaFQi2QeE5ek&usqp=CAc"
+        // },
+        // {
+        //   name:"Project 3",
+        //   header_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcShnXqCb1hVmRUAiGnYqywRpEbJhcX027b0ng&usqp=CAU"
 
-        }
-        ,
-        {
-          name:"Project 4",
-          header_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcShnXqCb1hVmRUAiGnYqywRpEbJhcX027b0ng&usqp=CAU"
+        // }
+        // ,
+        // {
+        //   name:"Project 4",
+        //   header_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcShnXqCb1hVmRUAiGnYqywRpEbJhcX027b0ng&usqp=CAU"
 
-        }
-        ,
-        {
-          name:"Project 5",
-          header_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcShnXqCb1hVmRUAiGnYqywRpEbJhcX027b0ng&usqp=CAU"
+        // }
+        // ,
+        // {
+        //   name:"Project 5",
+        //   header_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcShnXqCb1hVmRUAiGnYqywRpEbJhcX027b0ng&usqp=CAU"
 
-        }
-        ,
-        {
-          name:"Project 6",
-          header_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcShnXqCb1hVmRUAiGnYqywRpEbJhcX027b0ng&usqp=CAU"
+        // }
+        // ,
+        // {
+        //   name:"Project 6",
+        //   header_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcShnXqCb1hVmRUAiGnYqywRpEbJhcX027b0ng&usqp=CAU"
 
-        }
+        // }
       ]
     }
+    this.handleMouseEnter = this.handleMouseEnter.bind(this)
+    this.handleMouseLeave = this.handleMouseLeave.bind(this)
+    this.handleToggle = this.handleToggle.bind(this)
   };
 
+  handleToggle(event, id){
+    this.setState( {[`${id}Hovering`]:!this.state[`${id}Hovering`]})
+    this.setState({idz : id})
+  }
+
+  handleMouseEnter(event, id){
+    this.handleToggle(event, id)
+  }
+
+  handleMouseLeave(event, id){
+    this.handleToggle(event, id)
+  }
+
+  styleC(){
+    return {backgroundColor:this.state.contactHovering ? "blue" : "rgb(64, 64, 66)" }
+  }
+
+  styleA(){
+    return {backgroundColor:this.state.aboutHovering ? "blue" : "rgb(64, 64, 66)" }
+  }
+
+  styleE(){
+    return {backgroundColor:this.state.expertiseHovering ? "blue" : "rgb(64, 64, 66)" }
+  }
 
   render() {
+
+//  let NavbackgroundC = this.state[`${this.state.idz}Hovering`] ? "blue" : "black";
+
+//     let styleC = {
+//       backgroundColor: {NavbackgroundC}
+//   };
+
+//   let NavbackgroundE = this.state.expertiseHovering ? "red" : "black";
+
+//   let styleE = {
+//     backgroundColor: NavbackgroundE
+// };
+
+// let NavbackgroundA = this.state.aboutHovering ? "red" : "black";
+
+// let styleA = {
+//   backgroundColor: NavbackgroundA
+// };
     return (
       <div>
-        {/* <div className="flex-container  nav-a">
-          <div>SIGNUP</div>
-          <div>LOG IN</div>
-        </div> */}
         <div className="flex-container nav-b">
-          <div>CONTACT</div>
-          <div>EXPERTISE</div>
-          <div>ABOUT</div>
+          <div
+            id="contact"
+            style={this.styleC()}
+            onMouseEnter={event => this.handleMouseEnter(event, event.target.id)}
+            onMouseLeave={event => this.handleMouseLeave(event, event.target.id)}>CONTACT</div>
+          <div
+            id = "expertise"
+            style={this.styleE()}
+            onMouseEnter={event => this.handleMouseEnter(event, event.target.id)}
+            onMouseLeave={event => this.handleMouseLeave(event, event.target.id)}>EXPERTISE</div>
+          <div
+             id = "about"
+             style={this.styleA()}
+             onMouseEnter={event => this.handleMouseEnter(event, event.target.id)}
+             onMouseLeave={event => this.handleMouseLeave(event, event.target.id)}>ABOUT</div>
         </div>
-          <div className="titleImage">
-            <div className="layer">
-              <div className="titleLogo">
-                <img src="../logo.jpg" alt="Girl in a jacket" width="80" height="80"/>
-                <span className="titleText">ACME POLE BARNS</span>
-                <span className="titleTextLower1">Custom builds and</span>
-                <span className="titleTextLower2">pre-designed models</span>
-                <span className="titleTextLower3">available.</span>
+        <section class= "container-fluid px-0">
+          <div  class="row align-items-center">
+              <div id="headingGroup" class="text-center d-sm-none">
+                <span className = "popup">ACME POLE BARNS</span>
               </div>
+            <div className="titleLogo" class="container-title">
+              <div className="layer">
+              <img className="imageBorder" src="../barn.jpg" class="img-fluid" />
+              <img  className = "logo" src="../logo.jpg" alt="logo" width="80" height="80"/>
+              <div class="d-none d-sm-block">
+              <span className="titleText" >ACME POLE BARNS</span>
+              </div>
+              <span className="titleTextLower1">Custom builds and</span>
+              <span className="titleTextLower2">pre-designed models</span>
+              <span className="titleTextLower3">available.</span>
             </div>
-          </div>
+            </div>
+            </div>
+        </section>
         <div className="sumSlid">
-          <div className= "summary">
+          <div className= "summary" class="col-md-6">
             <p className = "summaryText">Let us plan, design, build your next project.</p>
             <p className = "summaryTextBody">Lorem Ipsum is simply dummy text of the printing and typesetting
              industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
@@ -76,7 +141,7 @@ class App extends React.Component {
              survived not only five centuries, but also the leap into electronic typesetting, remaining
              essentially unchanged. </p>
           </div>
-          <div className= "slider">
+          <div className= "slider" class="col-lg-6">
               <BootstrapCarousel/>
           </div>
         </div>
