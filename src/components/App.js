@@ -7,6 +7,16 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      style1: {
+        color: "black",
+        background: "white",
+        fontSize: "18px",
+        fontWeight: "600"
+    },
+    style2: {
+      color: "white",
+      background: "rgb(64, 64, 66)",
+    },
       contactHovering: false,
       aboutHovering: false,
       expertiseHovering: false,
@@ -51,8 +61,8 @@ class App extends React.Component {
   };
 
   handleToggle(event, id){
-    this.setState( {[`${id}Hovering`]:!this.state[`${id}Hovering`]})
-    this.setState({idz : id})
+    this.setState( {[`${id}Hovering`]:!this.state[`${id}Hovering`]});
+    this.setState({idz : id});
   }
 
   handleMouseEnter(event, id){
@@ -63,37 +73,18 @@ class App extends React.Component {
     this.handleToggle(event, id)
   }
 
-  styleC(){
-    return {backgroundColor:this.state.contactHovering ? "blue" : "rgb(64, 64, 66)" }
-  }
-
   styleA(){
-    return {backgroundColor:this.state.aboutHovering ? "blue" : "rgb(64, 64, 66)" }
+    return this.state.aboutHovering ? this.state.style1 : this.state.style2
   }
 
+  styleC(){
+    return this.state.contactHovering ? this.state.style1 : this.state.style2
+  }
   styleE(){
-    return {backgroundColor:this.state.expertiseHovering ? "blue" : "rgb(64, 64, 66)" }
+    return this.state.expertiseHovering ? this.state.style1 : this.state.style2
   }
 
   render() {
-
-//  let NavbackgroundC = this.state[`${this.state.idz}Hovering`] ? "blue" : "black";
-
-//     let styleC = {
-//       backgroundColor: {NavbackgroundC}
-//   };
-
-//   let NavbackgroundE = this.state.expertiseHovering ? "red" : "black";
-
-//   let styleE = {
-//     backgroundColor: NavbackgroundE
-// };
-
-// let NavbackgroundA = this.state.aboutHovering ? "red" : "black";
-
-// let styleA = {
-//   backgroundColor: NavbackgroundA
-// };
     return (
       <div>
         <div className="flex-container nav-b">
