@@ -22,37 +22,37 @@ class App extends React.Component {
       expertiseHovering: false,
       idz:"",
       projects:[
-        // {
-        //   name:"Project 1",
-        //   header_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSR_SXjCMKCZhzFijR82Qe99ykQ1qayJI9fZdULfnRUvwA3O7rlaFQi2QeE5ek&usqp=CAc"
-        // },
-        // {
-        //   name:"Project 2",
-        //   header_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSR_SXjCMKCZhzFijR82Qe99ykQ1qayJI9fZdULfnRUvwA3O7rlaFQi2QeE5ek&usqp=CAc"
-        // },
-        // {
-        //   name:"Project 3",
-        //   header_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcShnXqCb1hVmRUAiGnYqywRpEbJhcX027b0ng&usqp=CAU"
+        {
+          name:"Project 1",
+          header_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSR_SXjCMKCZhzFijR82Qe99ykQ1qayJI9fZdULfnRUvwA3O7rlaFQi2QeE5ek&usqp=CAc"
+        },
+        {
+          name:"Project 2",
+          header_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSR_SXjCMKCZhzFijR82Qe99ykQ1qayJI9fZdULfnRUvwA3O7rlaFQi2QeE5ek&usqp=CAc"
+        },
+        {
+          name:"Project 3",
+          header_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcShnXqCb1hVmRUAiGnYqywRpEbJhcX027b0ng&usqp=CAU"
 
-        // }
-        // ,
-        // {
-        //   name:"Project 4",
-        //   header_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcShnXqCb1hVmRUAiGnYqywRpEbJhcX027b0ng&usqp=CAU"
+        }
+        ,
+        {
+          name:"Project 4",
+          header_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcShnXqCb1hVmRUAiGnYqywRpEbJhcX027b0ng&usqp=CAU"
 
-        // }
-        // ,
-        // {
-        //   name:"Project 5",
-        //   header_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcShnXqCb1hVmRUAiGnYqywRpEbJhcX027b0ng&usqp=CAU"
+        }
+        ,
+        {
+          name:"Project 5",
+          header_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcShnXqCb1hVmRUAiGnYqywRpEbJhcX027b0ng&usqp=CAU"
 
-        // }
-        // ,
-        // {
-        //   name:"Project 6",
-        //   header_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcShnXqCb1hVmRUAiGnYqywRpEbJhcX027b0ng&usqp=CAU"
+        }
+        ,
+        {
+          name:"Project 6",
+          header_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcShnXqCb1hVmRUAiGnYqywRpEbJhcX027b0ng&usqp=CAU"
 
-        // }
+        }
       ]
     }
     this.handleMouseEnter = this.handleMouseEnter.bind(this)
@@ -106,25 +106,26 @@ class App extends React.Component {
         </div>
         <section class= "container-fluid px-0">
           <div  class="row align-items-center">
-              <div id="headingGroup" class="text-center d-sm-none">
-                <span className = "popup">ACME POLE BARNS</span>
-              </div>
+            <div id="headingGroup" class="text-center d-sm-none">
+              <span className = "popup">ACME POLE BARNS</span>
+            </div>
             <div className="titleLogo" class="container-title">
               <div className="layer">
-              <img className="imageBorder" src="../barn.jpg" class="img-fluid" />
-              <img  className = "logo" src="../logo.jpg" alt="logo" width="80" height="80"/>
+                <img className="imageBorder" src="../barn.jpg" class="img-fluid" />
+                <img  className = "logo" src="../logo.jpg" alt="logo" width="80" height="80"/>
               <div class="d-none d-sm-block">
-              <span className="titleText" >ACME POLE BARNS</span>
+                <span className="titleText" >ACME POLE BARNS</span>
               </div>
               <span className="titleTextLower1">Custom builds and</span>
               <span className="titleTextLower2">pre-designed models</span>
               <span className="titleTextLower3">available.</span>
+              </div>
             </div>
-            </div>
-            </div>
+          </div>
         </section>
-        <div className="sumSlid">
-          <div className= "summary" class="col-md-6">
+       <section class="container-fluid px-0" className="sumSlid">
+        <div class="row align-items-center content">
+          <div className= "summary" class="col-md-6" >
             <p className = "summaryText">Let us plan, design, build your next project.</p>
             <p className = "summaryTextBody">Lorem Ipsum is simply dummy text of the printing and typesetting
              industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
@@ -132,21 +133,26 @@ class App extends React.Component {
              survived not only five centuries, but also the leap into electronic typesetting, remaining
              essentially unchanged. </p>
           </div>
-          <div className= "slider" class="col-lg-6">
+          <div className= "slider" class="col-md-6">
               <BootstrapCarousel/>
           </div>
         </div>
-        <div>
-          <div className= "projectText">Recent Work</div>
-          <hr></hr>
-          <p className= "projectPara">Our projects are made to order with the highest standards.
-            We are committed to taking the time needed to design projects that meets
-            meets or exceeds our clients expecations and looking great doing it.
-          </p>
-          <ProjectList className = "flex-container projectList"
+        </section>
+        <section class= "container-fluid px-0">
+          <div class="col-md-12">
+            <div className="recentWork">
+              <div className= "projectText" >Recent Work</div>
+              <hr></hr>
+              <p className= "projectPara">Our projects are made to order with the highest standards.
+                We are committed to taking the time needed to design projects that meets
+                meets or exceeds our clients expecations and looking great doing it.
+              </p>
+            </div>
+          <ProjectList className = "flex-container projectList "
             projects={this.state.projects}
             />
-        </div>
+            </div>
+        </section>
         <div className="contact">
           <div className= "contactForm">
             <div className = "contactTitle">CONTACT US</div>

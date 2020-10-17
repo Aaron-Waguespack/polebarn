@@ -44,6 +44,7 @@ html {
 
 .imageBorder{
     position: relative;
+
 }
 
 
@@ -52,12 +53,16 @@ html {
     border:black 1px solid;
     object-fit: cover;
    opacity: .5;
+   width:100vw;
+
+
 }
 
 .logo {
     position: absolute;
     top: 0;
     left: 15px;
+
 }
 
 #headingGroup {
@@ -124,12 +129,14 @@ html {
     background-color: rgba(20, 20, 32);
  }
 
+ .this2 {
+     background-color: pink;
+ }
 
 .sumSlid {
-    display:flex;
-    height:300px;
-    width: auto;
+    background-color: rgba(20, 20, 32);
 }
+
 .summary {
     background-color: rgb(26, 25, 25);
     flex:50%;
@@ -143,16 +150,15 @@ html {
     color: white;
     font-size: 18px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding-top: 5px;
+    padding-top: 15px;
 }
 
 .summaryTextBody{
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 5px 15px 10px 15px;
     color: white;
     font-size: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding-top: 5px;
+
 }
 
 
@@ -171,17 +177,33 @@ html {
     flex:50%;
 }
 
-.cardBody{
+.projectListBox{
+    border: 1px solid black;
+}
+
+.cBody{
     background-color: #dfe3e6;
-    width: 100%;
-    height: 190px;
+
     text-align: center;
     /* background-color: rgba(5, 80, 177, 0.678); */
     display:inline-block;
     border-radius:.5rem;
     box-shadow:4px 4px 8px 0px rgba( 0, 0, 0, 0.2 );
     padding:0;
+    width: 100%;
 }
+
+@media only screen and (min-width: 700px) {
+    .header_image {
+      max-width: 40vw;
+
+    }
+  }
+  @media only screen and (min-width: 1100px) {
+    .header_image {
+      max-width: 30vw;
+    }
+ }
 
 .cardTitle {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -195,6 +217,7 @@ html {
     -moz-osx-font-smoothing: grayscale;
     font-weight: bold;
     padding: 5px 5px 5px 5px;
+    width: 100%;
 }
 .projectText{
     font-size: large;
@@ -211,9 +234,7 @@ html {
 }
 
 .projectList{
-    width:100%;
-    border: solid black;
-    border-width: 1px;
+
     margin-top: 10px;
     padding-top: 15px;
     padding-bottom: 20px;
@@ -231,9 +252,26 @@ html {
 
 }
 
+.header_image {
+    margin-top: 1em;
+    width: 100%;
+    /* padding:0px 10px 0px 10px; */
+}
+.projectWrapper {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+  }
+
+.recentWork{
+   min-height:150px;
+   padding-bottom:15px;
+}
+
 .container-title {
 position: relative;
 }
+
 .title{
     color: black;
     text-align: center;
@@ -246,17 +284,8 @@ position: relative;
     margin-bottom: 5px;
 
 }
-.projectWrapper {
-    display: inline-block;
-    vertical-align: top;
-  }
 
-.header_image {
-    margin-top: 1em;
-    width: auto;
-    height:140px;
-    padding:0px 10px 0px 10px;
-}
+
 
 .contact {
     display:flex;
@@ -391,7 +420,11 @@ position: relative;
 }
 
 .carouselImage {
-    height:300px;
+    height: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
 }
 
 
