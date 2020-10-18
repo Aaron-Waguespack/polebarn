@@ -4,10 +4,13 @@ import React from "react";
 class Form extends React.Component {
 render() {
     return (
-<div className="contacts" class="container-fluid px-0">
-        <div class="row align-items-center content flex-column-reverse flex-md-row">
-          <div class="col-md-6" id= "contactForm">
-            <div className = "contactTitle">CONTACT US</div>
+<div className="contacts" class="container-fluid px-0" >
+        <div class="row align-items-center content flex-column-reverse flex-md-row"
+            //  className="rempad"
+             >
+          <div class="col-md-6" id= "contactForm"  >
+              <div className = "centerform">
+            <div id ="contactTitle">CONTACT US</div>
             <div>First Name*</div>
             <div className="formField"></div>
             <div>Last Name*</div>
@@ -30,7 +33,8 @@ render() {
             <div>Message*</div>
             <div className="formMessage"></div>
             </div>
-          <div className="contactInfo" class="col-md-6">
+            </div>
+          <div  class="col-md-6" id= "addressForm">
           <div className= "contactTitle">CONTACT US FOR ANY OF YOUR POLE BARN NEEDS</div>
           <div className= "contactPhone">303.999.1234</div>
           <div className= "contactAddress">1234 NEVER ENDING DRIVE <br></br> FORT COLLINS, CO 80521 </div>

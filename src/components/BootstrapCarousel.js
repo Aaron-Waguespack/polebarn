@@ -10,7 +10,7 @@ render() {
                 <div className="row">
                 </div>
                 <div className="row">
-                    <div className="col colpad">
+                    <div className="colPad">
                         <Carousel>
                             <Carousel.Item>
                                 <img

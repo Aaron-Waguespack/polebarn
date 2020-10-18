@@ -178,6 +178,7 @@ html {
 
 .projectListBox{
     border: 1px solid black;
+
 }
 
 .cBody{
@@ -186,9 +187,15 @@ html {
     display:inline-block;
     border-radius:.5rem;
     box-shadow:4px 4px 8px 0px rgba( 0, 0, 0, 0.2 );
+    margin:15px;
 
 }
 
+.header_image {
+    margin-top: 1em;
+    width: 90vh;
+    padding:0px 10px 0px 10px;
+}
 
 @media only screen and (min-width: 700px) {
     .header_image {
@@ -220,6 +227,7 @@ html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     padding-top: 15px;
+
 }
 
 .projectPara {
@@ -237,6 +245,7 @@ html {
     float: left;
     width: 25%;
     height: 500px;
+
 }
 
 .projectform{
@@ -247,11 +256,7 @@ html {
 
 }
 
-.header_image {
-    margin-top: 1em;
-    width: 100vh;
-    padding:0px 10px 0px 10px;
-}
+
 .projectWrapper {
     display: inline-block;
     vertical-align: top;
@@ -303,70 +308,70 @@ position: relative;
 
 } */
 
-.contactTitle {
+#contactTitle {
     color: white;
-    font-size: 20px;
+    font-size: 35px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 500;
-    padding-bottom: 10px;
     background-color: black;
     height:100%;
     padding: 0 0 0 0 !important ;
+    margin-bottom:30px;
+    text-align: center;
 
 }
 #contactForm {
     background-color:black;
-    flex:50%;
-    height:100%;
     color: white;
-    padding-left: 20px;
     padding-top: 25px;
+    padding-bottom: 80px;
 
 }
 
-.contactInfo {
-    background-color: rgba(62, 63, 77, 0.9);
-    flex:50%;
-     height:100%;
-    width: 100%;
+#contactInfo {
+    background-color:black;
     color: white;
-    font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding-left: 15px;
-    padding-right: 15px;
+    margin-left: 20px;
     padding-top: 25px;
 }
 
+#addressForm {
+    background-color: rgb(26, 25, 25,.9);
+    height: 100%;
+}
+.centerform{
+    background-color: black;
+    margin: auto;
+    width: 85%;
+    padding: 10px;
+}
 .formField {
     background-color: rgba(62, 63, 77, 0.9);
     height: 30px;
-    width:85%;
     margin-bottom: 10px;
 }
 
 .formFieldProduct{
     background-color: rgba(62, 63, 77, 0.9);
     height: 30px;
-    width:85%;
 }
 .formShortRow {
  display:flex;
- width:87%;
  padding-bottom: 10px;
 }
 
 .shortOne{
     flex:50%;
-
+    padding-right:15px ;
 }
 
 .shortTwo{
     flex:50%;
+
 }
 .formFieldShort {
     background-color: rgba(62, 63, 77, 0.9);
     height: 30px;
-    width:95%;
     padding-bottom: 10px
 }
 
@@ -380,7 +385,7 @@ position: relative;
 .formMessage {
     background-color: rgba(62, 63, 77, 0.9);
     height: 20px;
-    width:85%;
+    /* width:85%; */
     height: 85px;
 }
 
@@ -423,7 +428,6 @@ position: relative;
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding-bottom: 10px;
-    background-color: rgb(26, 25, 25,.9)
 
 }
 
@@ -433,11 +437,12 @@ position: relative;
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding-bottom: 10px;
-    background-color: rgb(26, 25, 25,.9)
 
 }
 
-
+.carousel-image{
+    padding: 0px !important;
+}
 
 
 .carousel-caption div{
@@ -458,4 +463,8 @@ position: relative;
 }
 
 .recpro {margin-bottom: 20px;
+}
+
+.rempad {
+    padding:0px !important;
 }

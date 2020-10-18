@@ -107,7 +107,7 @@ class App extends React.Component {
              onMouseLeave={event => this.handleMouseLeave(event, event.target.id)}>ABOUT</div>
         </div>
         <section class= "container-fluid px-0">
-          <div  class="row align-items-center">
+          <div  class="row align-items-center" className="rempad">
             <div id="headingGroup" class="text-center d-sm-none">
               <span className = "popup">ACME POLE BARNS</span>
             </div>
@@ -155,7 +155,7 @@ class App extends React.Component {
           />
           </div>
       </section>
-      <section class= "oopps">
+      <section className="rempad">
         <Form/>
       </section>
       </div>
