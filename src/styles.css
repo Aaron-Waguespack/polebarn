@@ -1,32 +1,20 @@
-
-
 html {
     margin:    0 auto;
     min-height:100%;
+    min-width: 300px;
 }
 
-
-.nav-a div{
-    color: white;
-    width: 100px;
-    justify-content: right;
-    text-align: center;
-    line-height: 20px;
-    text-align: right;
-
-}
-
-.nav-b{
+/* Navs */
+.navWrapper{
     background-color: rgb(64, 64, 66);
-    color: white;
     height:40px;
     align-items: center;
     display: flex;
     flex-direction: row-reverse;
-    padding-right: 10px;
+    padding-right: 8px;
 }
 
-.nav-b div{
+.navs {
     color: white;
     width: 100px;
     line-height: 20px;
@@ -34,42 +22,46 @@ html {
     border-radius: 25px;
 }
 
+/* Logo, Title and Title Pic */
+
 .titleLogo {
-    display: flex;
-    position: relative;
-    border: 5px solid black;
-    padding:5px;
-    margin:5px;
+  position: relative;
 }
 
 .imageBorder{
-    position: relative;
+  position: relative;
 
 }
 
-
-
 .img-fluid {
-    border:black 1px solid;
-    object-fit: cover;
-   opacity: .5;
-   width:100vw;
-
-
+  border:black 1px solid;
+  object-fit: cover;
+  opacity: .5;
+  width:100vw;
 }
 
 .logo {
     position: absolute;
-    top: 0;
-    left: 15px;
-
+    top: 61px;
+    left: 13px;
+    z-index: 1;
 }
 
+.logo2 {
+    position: absolute;
+    top: 1px;
+    left: 13px;
+}
+
+.layer {
+    background-color: rgba(20, 20, 32);
+ }
+
+ /* Title Text */
 #headingGroup {
     width: 100%;
     background-color: rgb(26, 25, 25,.9);
 }
-
 
 .popup{
     width: 100%;
@@ -78,61 +70,65 @@ html {
     font-size: 40px;
 }
 
+@media only screen and (max-width: 365px) {
+    .popup{
+      font-size: 30px;
+    }
+    .logo {
+        position: absolute;
+        top: 49px;
+        left: 13px;
+        z-index: 1;
+    }
+  }
+
 .titleText{
-    color: rgb(255, 255, 255,.9);
-    font-weight: bold;
+  color: rgb(255, 255, 255,.9);
+  right: 30px;
+  position: absolute;
+  font-weight: bold;
+  padding-left: 15px;
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 375px) {
+  .titleText {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 330px) {
+  .titleText {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .titleText {
+    font-size: 16px;
+  }
+}
+#top{
     padding-top: 10px;
     font-size: 55px;
-    position: absolute;
     left:0;
     top:0;
     padding-left: 150px;
     line-height: 1;
 }
 
-
-.titleTextLower1{
-    position:absolute;
-    color: rgb(255, 255, 255,.9);
-    font-weight: bold;
-    padding-left: 15px;
-    font-size: 30px;
-    position: absolute;
+.lower1{
     bottom: 75px;
-    right: 30px;
-
 }
 
-.titleTextLower2{
-    color: rgb(255, 255, 255,.9);
-    font-weight: bold;
-    padding-left: 15px;
-    font-size: 30px;
-    position: absolute;
+.lower2{
     bottom: 40px;
-    right: 30px;
 }
 
-.titleTextLower3{
-    color: rgb(255, 255, 255,.9);
-    font-weight: bold;
-    padding-left: 15px;
-    font-size: 30px;
-    position: absolute;
+.lower3{
     bottom: 5px;
-    right: 30px;
 }
 
-
-
-.layer {
-    background-color: rgba(20, 20, 32);
- }
-
- .this2 {
-     background-color: pink;
- }
-
+/* Summary and Slider */
 .sumSlid {
     background-color: rgba(20, 20, 32);
 }
@@ -148,7 +144,7 @@ html {
     padding-right: 15px;
     font-weight: bold;
     color: white;
-    font-size: 24px;
+    font-size: 25px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding-top: 15px;
 }
@@ -156,7 +152,7 @@ html {
 .summaryTextBody{
     padding: 5px 15px 10px 15px;
     color: white;
-    font-size: 17px;
+    font-size: 16px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
@@ -169,17 +165,84 @@ html {
 
 }
 
-.outterDiv {
-    display:flex
+/* Recent Work */
+.recentWork{
+padding-top:25px;
+   min-height:200px;
+   padding-bottom:15px;
 }
-.innerDivs {
-    flex:50%;
+.recentText{
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding-top: 15px;
+}
+.recentPara {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size:20px;
+    padding-top: 10px;
+}
+/* Project List */
+
+.projectList{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    float: left;
+    height:380px;
+    overflow-y: auto;
+    border: 1px solid black;
 }
 
 .projectListBox{
-    border: 1px solid black;
-
+  margin-left: 20px;
+    height:395px;
+    width: 95vw;
 }
+.header_image {
+    margin-top: 10px;
+    padding:0px 10px 0px 10px;
+    width:85vw;
+}
+
+@media only screen and (min-width: 750px) {
+  .projectList{
+    height:545px;
+  }
+  .projectListBox{
+      height:600px;
+      width: 96vw;
+  }
+  .header_image {
+    width:40vw;
+    }
+}
+@media only screen and (min-width: 1100px) {
+  .projectList{
+    height:545px;
+  }
+  .projectListBox{
+      height:600px;
+      width: 96vw;
+  }
+  .header_image {
+    max-width: 20vw;
+    }
+}
+.projectWrapper {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+/* .project:after {
+    content: "";
+    display: table;
+    clear: both;
+} */
+
+/* Card Styles */
 
 .cBody{
     background-color: rgb(26, 25, 25,.9);
@@ -191,254 +254,123 @@ html {
 
 }
 
-.header_image {
-    margin-top: 1em;
-    width: 46vh;
-    padding:0px 10px 0px 10px;
-}
-
-@media only screen and (min-width: 700px) {
-    .header_image {
-      max-width: 40vw;
-
-    }
-  }
-  @media only screen and (min-width: 1100px) {
-    .header_image {
-      max-width: 25vw;
-    }
- }
-
 .cardTitle {
     font-size: 40px;
     color: white;
     font-weight: 700;
 }
 
-.projectCard{
-    font-weight: bold;
-    padding: 5px 5px 5px 5px;
+/* Contact Us Form */
 
-}
-
-.projectText{
-    font-size: large;
-    font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    padding-top: 15px;
-
-}
-
-.projectPara {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    font-size:16px;
-}
-
-.projectList{
-
-    margin-top: 10px;
-    padding-top: 15px;
-    padding-bottom: 20px;
-    text-align: center;
-    float: left;
-    width: 25%;
-    height: 500px;
-
-}
-
-.projectform{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    height:100px;
-    color: whitesmoke;
-    margin-bottom: 18px;
-
-}
-
-
-.projectWrapper {
-    display: inline-block;
-    vertical-align: top;
-  }
-.project {margin: 0 -5px;}
-
-
-.project:after {
-content: "";
-display: table;
-clear: both;
-}
-
-@media screen and (max-width: 600px) {
-.projectList {
-    width: 100vw;
-    display: block;
-    margin-bottom: 20px;
-}
-}
-
-.recentWork{
-padding-top:25px;
-   min-height:200px;
-   padding-bottom:15px;
-}
-
-.container-title {
-position: relative;
-}
-
-.title{
-    color: black;
-    text-align: center;
-    text-decoration: underline;
-}
-.formTitle{
-    padding-top: 10px;
-    font-weight: 700;
-    font-size:larger ;
-    margin-bottom: 5px;
-}
-
-/* .contacts {
-    display:flex;
-    background-image: url('/render1.jpg');
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-
-} */
-
-#contactTitle {
-    color: white;
-    font-size: 35px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 500;
-    background-color: black;
-    height:100%;
-    padding: 0 0 0 0 !important ;
-    margin-bottom:30px;
-    text-align: center;
-
-}
-#contactForm {
-    background-color:black;
-    color: white;
-    padding-top: 25px;
-    padding-bottom: 80px;
-
-}
-
-#contactInfo {
-    background-color:black;
-    color: white;
-    margin-left: 20px;
-    padding-top: 25px;
-}
-
-#addressForm {
-    background-color: rgb(26, 25, 25,.9);
-    height: 100%;
-}
 .centerform{
     background-color: black;
     margin: auto;
     width: 85%;
     padding: 10px;
 }
+
+#contactForm {
+    background-color:black;
+    color: white;
+    height: 100%;
+    font-size: 16px;
+}
+
+.formTitle{
+    padding-top: 10px;
+    font-weight: 700;
+    font-size:larger ;
+    margin-bottom: 15px;
+    align-content: center;
+    font-size: 25px;
+    text-align: center;
+}
+
 .formField {
     background-color: rgba(62, 63, 77, 0.9);
     height: 30px;
     margin-bottom: 10px;
 }
 
-.formFieldProduct{
-    background-color: rgba(62, 63, 77, 0.9);
-    height: 30px;
-}
 .formShortRow {
- display:flex;
- padding-bottom: 10px;
-}
+  display:flex;
+  padding-bottom: 10px;
+ }
 
-.shortOne{
-    flex:50%;
-    padding-right:15px ;
-}
+ .shortOne{
+     flex:50%;
+     padding-right:15px ;
+ }
 
-.shortTwo{
-    flex:50%;
+ .shortTwo{
+     flex:50%;
 
-}
-.formFieldShort {
-    background-color: rgba(62, 63, 77, 0.9);
-    height: 30px;
-    padding-bottom: 10px
-}
+ }
+ .formFieldShort {
+     background-color: rgba(62, 63, 77, 0.9);
+     height: 30px;
+     padding-bottom: 10px
+ }
 
-.formFieldShort2 {
-    background-color: rgba(62, 63, 77, 0.9);
-    height: 20px;
-    width:95%;
-    padding-bottom: 10px;
+.formFieldProduct{
+  background-color: rgba(62, 63, 77, 0.9);
+  height: 30px;
 }
 
 .formMessage {
-    background-color: rgba(62, 63, 77, 0.9);
-    height: 20px;
-    /* width:85%; */
-    height: 85px;
+  background-color: rgba(62, 63, 77, 0.9);
+  height: 20px;
+  height: 85px;
 }
 
 .formWarn {
-    color:red;
-    font-size: smaller;
-    padding-bottom: 10px;
+  color:red;
+  font-size: smaller;
+  padding-bottom: 10px;
 }
 
-.contactTitle{
-    text-align: CENTER;
-    color: white;
-    font-size: 25px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    padding-bottom: 20px;
+/* Contact Info */
 
+#contactInfo {
+    background-color: rgb(26, 25, 25,.9);
+    color: white;
+    padding-top: 25px;
+    height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    text-align: left;
+}
+
+.contactTitle {
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom:30px;
+    text-align: center;
+    font-size: 25px;
 }
 
 .contactPhone{
-    text-align: left;
-    color: white;
-    font-size: 20px;
-    font-weight: bolder;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
     padding-bottom: 10px;
+    font-size: 25px;
 }
 
 .contactEmail{
-    text-align: left;
-    color: white;
-    font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 10px;
     padding-bottom: 55px;
 }
 
 .contactAddress{
-    text-align: left;
-    color: white;
-    font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding-bottom: 10px;
+    padding-top: 10px;
 
+    padding-bottom: 10px;
 }
 
 .contactBlurb{
-    text-align: left;
-    color: white;
-    font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding-bottom: 10px;
-
 }
+
+
 
 .carousel-image{
     padding: 0px !important;

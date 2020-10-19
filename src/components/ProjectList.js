@@ -5,7 +5,7 @@ function ProjectList(props) {
 
     return(
         <div  class="row align-items-center content" className="projectListBox">
-            <div className="projectList" class="column">
+            <div className="projectList" >
                 {props.projects.map((project, i)=>(
                     <Project
                         key={i}

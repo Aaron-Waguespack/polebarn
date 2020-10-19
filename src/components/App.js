@@ -88,77 +88,87 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="flex-container nav-b">
-          <div
-            id="contact"
-            style={this.styleC()}
-            onMouseEnter={event => this.handleMouseEnter(event, event.target.id)}
-            onMouseLeave={event => this.handleMouseLeave(event, event.target.id)}>CONTACT</div>
-          <div
-            id = "expertise"
-            style={this.styleE()}
-            onMouseEnter={event => this.handleMouseEnter(event, event.target.id)}
-            onMouseLeave={event => this.handleMouseLeave(event, event.target.id)}>EXPERTISE</div>
-          <div
-             id = "about"
-             style={this.styleA()}
-             onMouseEnter={event => this.handleMouseEnter(event, event.target.id)}
-             onMouseLeave={event => this.handleMouseLeave(event, event.target.id)}>ABOUT</div>
-        </div>
+      <section >
+        <section class= "container-fluid px-0" >
+          <div  class="row" className="navWrapper">
+            <div
+              id="contact" className="navs"
+              style={this.styleC()}
+              onMouseEnter={event => this.handleMouseEnter(event, event.target.id)}
+              onMouseLeave={event => this.handleMouseLeave(event, event.target.id)}>CONTACT</div>
+            <div
+              id = "expertise" className="navs"
+              style={this.styleE()}
+              onMouseEnter={event => this.handleMouseEnter(event, event.target.id)}
+              onMouseLeave={event => this.handleMouseLeave(event, event.target.id)}>EXPERTISE</div>
+            <div
+              id = "about" className="navs"
+              style={this.styleA()}
+              onMouseEnter={event => this.handleMouseEnter(event, event.target.id)}
+              onMouseLeave={event => this.handleMouseLeave(event, event.target.id)}>ABOUT</div>
+          </div>
+        </section>
         <section class= "container-fluid px-0">
-          <div  class="row align-items-center" className="rempad">
+          <div  class="row align-items-center" >
+            <div class="col-md-12">
             <div id="headingGroup" class="text-center d-sm-none">
               <span className = "popup">ACME POLE BARNS</span>
+              <img  className = "logo" src="../logo.jpg" alt="logo" width="80" height="80"/>
             </div>
-            <div className="titleLogo" class="container-title">
+            <div className="titleLogo" class="container-title px-0">
               <div className="layer">
                 <img className="imageBorder" src="../barn.jpg" class="img-fluid" />
-                <img  className = "logo" src="../logo.jpg" alt="logo" width="80" height="80"/>
               <div class="d-none d-sm-block">
-                <span className="titleText" >ACME POLE BARNS</span>
+                <span className="titleText" id="top" >ACME POLE BARNS</span>
+                <img  className = "logo2" src="../logo.jpg" alt="logo" width="80" height="80"/>
               </div>
-              <span className="titleTextLower1">Custom builds and</span>
-              <span className="titleTextLower2">pre-designed models</span>
-              <span className="titleTextLower3">available.</span>
+              <span className="titleText lower1">Custom builds and</span>
+              <span className="titleText lower2">pre-designed models</span>
+              <span className="titleText lower3">available.</span>
+              </div>
+            </div>
+          </div>
+          </div>
+        </section>
+        <section class="container-fluid px-0" className="sumSlid">
+          <div class="row align-items-center content">
+            <div className= "summary" class="col-md-6" >
+              <p className = "summaryText">Let us plan, design, build your next project.</p>
+              <p className = "summaryTextBody">Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+              unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into electronic typesetting, remaining
+              essentially unchanged. </p>
+            </div>
+            <div className= "slider" class="col-md-6">
+                <BootstrapCarousel/>
+            </div>
+          </div>
+        </section>
+        <section class= "container-fluid px-0" className="recpro">
+          <div class="row align-items-center content">
+            <div class="col-md-12">
+              <div className="recentWork">
+                <div className= "recentText" >Recent Work</div>
+                <hr></hr>
+                <p className= "recentPara">Our projects are made to order with the highest standards.
+                  We are committed to taking the time needed to design projects that meets
+                  meets or exceeds our clients expecations and looking great doing it.
+                </p>
               </div>
             </div>
           </div>
         </section>
-       <section class="container-fluid px-0" className="sumSlid">
-        <div class="row align-items-center content">
-          <div className= "summary" class="col-md-6" >
-            <p className = "summaryText">Let us plan, design, build your next project.</p>
-            <p className = "summaryTextBody">Lorem Ipsum is simply dummy text of the printing and typesetting
-             industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-             unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-             survived not only five centuries, but also the leap into electronic typesetting, remaining
-             essentially unchanged. </p>
+        <section class= "container-fluid px-0">
+          <div class="row align-items-center content">
+            <ProjectList
+              projects={this.state.projects}/>
           </div>
-          <div className= "slider" class="col-md-6">
-              <BootstrapCarousel/>
-          </div>
-        </div>
         </section>
-      <section class= "container-fluid px-0" className="recpro">
-        <div class="col-md-12">
-          <div className="recentWork">
-            <div className= "projectText" >Recent Work</div>
-            <hr></hr>
-            <p className= "projectPara">Our projects are made to order with the highest standards.
-              We are committed to taking the time needed to design projects that meets
-              meets or exceeds our clients expecations and looking great doing it.
-            </p>
-          </div>
-        <ProjectList className = "flex-container projectList "
-          projects={this.state.projects}
-          />
-          </div>
+        <section class= "container-fluid px-0">
+          <Form/>
+        </section>
       </section>
-      <section className="rempad">
-        <Form/>
-      </section>
-      </div>
     );
   }
 }
