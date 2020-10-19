@@ -193,7 +193,7 @@ html {
 
 .header_image {
     margin-top: 1em;
-    width: 90vh;
+    width: 46vh;
     padding:0px 10px 0px 10px;
 }
 
@@ -205,7 +205,7 @@ html {
   }
   @media only screen and (min-width: 1100px) {
     .header_image {
-      max-width: 30vw;
+      max-width: 25vw;
     }
  }
 
@@ -272,7 +272,7 @@ clear: both;
 
 @media screen and (max-width: 600px) {
 .projectList {
-    width: 100%;
+    width: 100vw;
     display: block;
     margin-bottom: 20px;
 }
