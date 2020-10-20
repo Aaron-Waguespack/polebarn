@@ -3,9 +3,9 @@ import React from "react";
 class Form extends React.Component {
 render() {
     return (
-<section class="col-md-12" >
-  <div class="row align-items-center content flex-column-reverse flex-md-row">
-    <div class="col-md-6" id= "contactForm"  >
+<section class="col-md-12" id="formNav">
+  <div class="row  content flex-column-reverse flex-md-row">
+    <div class="col-md-6" id="contactForm"  >
         <div className = "centerform">
           <div class ="formTitle">CONTACT US</div>
           <div>First Name*</div>
@@ -41,6 +41,7 @@ render() {
         meets or exceeds our clients expecations and looking great doing it.</div>
       </div>
     </div>
+
   </section>
     )
 }

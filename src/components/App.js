@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {createRef} from 'react';
 import '../styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import ProjectList from './ProjectList.js';
@@ -8,6 +8,9 @@ import Form from './Form.js';
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.formNavContact = createRef();
+    this.formNavExpertise = createRef();
+    this.formNavAbout = createRef();
     this.state = {
       style1: {
         color: "black",
@@ -86,29 +89,57 @@ class App extends React.Component {
     return this.state.expertiseHovering ? this.state.style1 : this.state.style2
   }
 
+
+  scrollThisContact(){
+    this.formNavContact.current.scrollIntoView({ behavior: 'smooth',
+     inline: "nearest"
+    });
+  }
+
+  scrollThisExpertise(){
+    this.formNavExpertise.current.scrollIntoView({ behavior: 'smooth',
+     inline: "nearest"
+    });
+  }
+
+  scrollThisAbout(){
+    this.formNavAbout.current.scrollIntoView({ behavior: 'smooth',
+     inline: "nearest"
+    });
+  }
+
   render() {
     return (
-      <section >
-        <section class= "container-fluid px-0" >
-          <div  class="row" className="navWrapper">
+      <section>
+        <section class= "container-fluid px-0" className="navTop" >
+          <div  class="row navbar" className="navWrapper" >
             <div
               id="contact" className="navs"
               style={this.styleC()}
+              onClick={()=>this.scrollThisContact()}
               onMouseEnter={event => this.handleMouseEnter(event, event.target.id)}
-              onMouseLeave={event => this.handleMouseLeave(event, event.target.id)}>CONTACT</div>
+              onMouseLeave={event => this.handleMouseLeave(event, event.target.id)}
+              >CONTACT
+              </div>
             <div
               id = "expertise" className="navs"
               style={this.styleE()}
+              onClick={()=>this.scrollThisExpertise()}
               onMouseEnter={event => this.handleMouseEnter(event, event.target.id)}
-              onMouseLeave={event => this.handleMouseLeave(event, event.target.id)}>EXPERTISE</div>
+              onMouseLeave={event => this.handleMouseLeave(event, event.target.id)}
+              >EXPERTISE
+           </div>
             <div
               id = "about" className="navs"
               style={this.styleA()}
+              onClick={()=>this.scrollThisAbout()}
               onMouseEnter={event => this.handleMouseEnter(event, event.target.id)}
-              onMouseLeave={event => this.handleMouseLeave(event, event.target.id)}>ABOUT</div>
+              onMouseLeave={event => this.handleMouseLeave(event, event.target.id)}
+             >ABOUT
+              </div>
           </div>
         </section>
-        <section class= "container-fluid px-0">
+        <section class= "container-fluid px-0" ref={this.formNavAbout} id="aboutTop" >
           <div  class="row align-items-center" >
             <div class="col-md-12">
             <div id="headingGroup" class="text-center d-sm-none">
@@ -148,8 +179,8 @@ class App extends React.Component {
         <section class= "container-fluid px-0" className="recpro">
           <div class="row align-items-center content">
             <div class="col-md-12">
-              <div className="recentWork">
-                <div className= "recentText" >Recent Work</div>
+              <div className="recentWork" ref={this.formNavExpertise} >
+                <div className= "recentText" id="page-2">Recent Work</div>
                 <hr></hr>
                 <p className= "recentPara">Our projects are made to order with the highest standards.
                   We are committed to taking the time needed to design projects that meets
@@ -165,7 +196,7 @@ class App extends React.Component {
               projects={this.state.projects}/>
           </div>
         </section>
-        <section class= "container-fluid px-0">
+        <section class= "container-fluid px-0" ref={this.formNavContact}>
           <Form/>
         </section>
       </section>

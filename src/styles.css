@@ -2,9 +2,14 @@ html {
     margin:    0 auto;
     min-height:100%;
     min-width: 300px;
+    scroll-behavior: smooth;
 }
 
 /* Navs */
+.navTop{
+margin-top: 40px;
+}
+
 .navWrapper{
     background-color: rgb(64, 64, 66);
     height:40px;
@@ -12,6 +17,10 @@ html {
     display: flex;
     flex-direction: row-reverse;
     padding-right: 8px;
+     position:fixed;
+     top:0;
+     width: 100%;
+     z-index: 99;
 }
 
 .navs {
@@ -23,6 +32,10 @@ html {
 }
 
 /* Logo, Title and Title Pic */
+#aboutTop{
+  padding-top: 35px;
+  margin-top: -35px;
+}
 
 .titleLogo {
   position: relative;
@@ -154,15 +167,12 @@ html {
     color: white;
     font-size: 16px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
 }
-
 
 .slider {
     text-align: center;
     background-color: rgb(26, 25, 25,.9);
     flex:50%;
-
 }
 
 /* Recent Work */
@@ -205,6 +215,19 @@ padding-top:25px;
     margin-top: 10px;
     padding:0px 10px 0px 10px;
     width:85vw;
+}
+
+@media only screen and (min-width: 400px) {
+  .projectList{
+    height:300px;
+  }
+  .projectListBox{
+      height:320px;
+      width: 96vw;
+  }
+  .header_image {
+    width:60vw;
+    }
 }
 
 @media only screen and (min-width: 750px) {
@@ -261,7 +284,10 @@ padding-top:25px;
 }
 
 /* Contact Us Form */
-
+#formNav{
+  padding-top: 35px;
+  margin-top: -35px;
+}
 .centerform{
     background-color: black;
     margin: auto;
@@ -272,8 +298,8 @@ padding-top:25px;
 #contactForm {
     background-color:black;
     color: white;
-    height: 100%;
     font-size: 16px;
+    padding-bottom: 25px ;
 }
 
 .formTitle{
@@ -335,7 +361,8 @@ padding-top:25px;
     background-color: rgb(26, 25, 25,.9);
     color: white;
     padding-top: 25px;
-    height: 100%;
+    padding-bottom:300px;
+
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
     text-align: left;
