@@ -82,7 +82,7 @@ margin-top: 40px;
     font-weight: bold;
     font-size: 40px;
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 999px) {
   .body {
   width:1000px
   }
