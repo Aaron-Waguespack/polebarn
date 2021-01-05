@@ -3,6 +3,7 @@ html {
     min-height:100%;
     min-width: 300px;
     scroll-behavior: smooth;
+    max-width: 960px;
 }
 
 /* Navs */
