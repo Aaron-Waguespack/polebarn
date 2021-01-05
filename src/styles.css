@@ -4,6 +4,8 @@ html {
     min-width: 300px;
     scroll-behavior: smooth;
     max-width: 960px;
+    width: 100%;
+    position: relative;
 }
 
 /* Navs */
